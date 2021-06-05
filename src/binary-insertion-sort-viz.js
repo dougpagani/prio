@@ -25,7 +25,7 @@ function BisVx(props) {
 
   function sortDisplayList() {
     const listCopy = [ ...list ]
-    listCopy.sort()
+    listCopy.sort((a,b) => a - b) // ascending
     setList(listCopy)
   }
   function shuffleDisplayList() {
