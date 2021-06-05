@@ -9,6 +9,22 @@
 - could facilitate a group-prioritization, as a sort-of six-sigma-project-planning-tool (ranking priorities across the team)
     - would need a disclaimer that the team must function like a democracy
 - "approximated binary insertion" -- only need a certain amount of times
+  - "facilitated approximate binary insertion sort"
+  >> aprox. in the same way that ANN is to KNN
+  >>> ie it doesnt matter if you get it perfect, and knowing that, we can make some severe optimizations in the facilitated algorithm
+
+- hybrid algorithms are programmatically-facilitated, human-core-run algorithms
+- "event-driven sort", driven ~= prompted/triggered
+- "monotonic progression of sorted-ness"
+
+- 2 key aspects of BIS for our application:
+  - least number of comparisons (besides merge-sort, which is inappropriate for the following requirement)
+  - monotonic progression of sorted-ness (can stop at any time and be in a more-sorted state)
+
+
+- splice(index, 0, newItem) ==> insert
+
+- on sorted-ness: index-gap of stuff you havent sorted
 
 # IMPLEMENTATION PATH IDEAS
 - start with a visualization that looks something like the visualization found in this:
