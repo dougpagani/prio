@@ -22,6 +22,12 @@ function BisVx(props) {
   const [unsortedSublistIndexInclusive, setUnsortedSublistIndexInclusive] = useState(0)
   const [list, setList] = useState(NUMBERS_LIST)
 
+  function sortDisplayList() {
+    const listCopy = [ ...list ]
+    listCopy.sort()
+    setList(listCopy)
+  }
+
 
   return (
     <div>
@@ -30,21 +36,22 @@ function BisVx(props) {
     </div>
     
   )
+  // HELPERS
+  function ActionsMenu(props) {
+    const { children, TODO, ...otherProps } = props
+    return (
+      <div>
+        <SortButton action={sortDisplayList}/>
+        <ShuffleResetButton/>
+        <StepButton/>
+      </div>
+    )
+  }
 }
 
-function ActionsMenu(props) {
-  const { children, TODO, ...otherProps } = props
+function SortButton({action}) {
   return (
-    <div>
-      <SortButton/>
-      <ShuffleResetButton/>
-      <StepButton/>
-    </div>
-  )
-}
-function SortButton() {
-  return (
-    <button>Sort</button>
+    <button onClick={action}>Sort</button>
   )
 }
 function ShuffleResetButton() {
