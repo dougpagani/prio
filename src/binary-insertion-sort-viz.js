@@ -69,7 +69,6 @@ function BisVx(props) {
 
 function ListDisplay(props) {
   const { 
-    children, 
     aList, 
     ...otherProps 
   } = props
