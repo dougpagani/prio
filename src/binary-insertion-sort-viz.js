@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './binary-insertion-sort-viz.css'
+import shuffle from './shuffle.js'
 
 const LIST_ITEM_TYPE = {
   numbers: "numbers",
@@ -27,6 +28,11 @@ function BisVx(props) {
     listCopy.sort()
     setList(listCopy)
   }
+  function shuffleDisplayList() {
+    const listCopy = [ ...list ]
+    shuffle(listCopy)
+    setList(listCopy)
+  }
 
 
   return (
@@ -46,7 +52,7 @@ function BisVx(props) {
     return (
       <div>
         <SortButton action={sortDisplayList}/>
-        <ShuffleResetButton/>
+        <ShuffleResetButton action={shuffleDisplayList}/>
         <StepButton/>
       </div>
     )
@@ -59,9 +65,9 @@ function SortButton({action}) {
     <button onClick={action}>Sort</button>
   )
 }
-function ShuffleResetButton() {
+function ShuffleResetButton({action}) {
   return (
-    <button>Shuffle</button>
+    <button onClick={action}>Shuffle</button>
   )
 }
 function StepButton() {
