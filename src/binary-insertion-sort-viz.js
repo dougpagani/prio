@@ -46,6 +46,7 @@ function BisVx(props) {
     <div>
       <ListDisplay aList={list}/>
       <ActionsMenu/>
+      <InternalsDashboard/>
     </div>
     
   )
@@ -53,6 +54,23 @@ function BisVx(props) {
   ///////////////
   //  HELPERS  //
   ///////////////
+  function InternalsDashboard(props) {
+  // This could maybe be generalized for any arbitrary component with:
+  // https://stackoverflow.com/questions/56875281/how-do-i-pass-all-state-variables-inside-react-hooks-to-my-child-component
+  // ... basically as an equivalent to `...this.state`
+    const { 
+      ...otherProps 
+    } = props
+
+    return (
+      <div className="internals-dashboard" >
+        <div>leftPointer: {leftPointer}</div>
+        <div>rightPointer: {rightPointer}</div>
+        <div>middlePointer: {middlePointer}</div>
+        <div>list: {JSON.stringify(list)}</div>
+      </div>
+    )
+  }
 
   function ActionsMenu(props) {
     const { children, TODO, ...otherProps } = props

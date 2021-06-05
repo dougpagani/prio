@@ -23,3 +23,13 @@
   display: flex;
   gap: 10px; /* TODO: make this smarter later */
 }
+
+.internals-dashboard.internals-dashboard {
+  background: black;
+  padding: 1em;
+  margin-top: 1em;
+  color: #00ff00;
+  font-size: 0.8em;
+  font-family: monospace; 
+}
+
