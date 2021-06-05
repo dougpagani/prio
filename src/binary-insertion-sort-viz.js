@@ -9,11 +9,12 @@ function BisVx(props) {
   const [rightPointer, setRightPointer] = useState()
   const [middlePointer, setMiddlePointer] = useState()
   const [unsortedSublistIndexInclusive, setUnsortedSublistIndexInclusive] = useState(0)
+  const [list, setList] = useState([0, 1, 2])
 
 
   return (
     <div>
-      <ListDisplayStylingExample/>
+      <ListDisplay aList={list}/>
       <ActionsMenu/>
     </div>
     
@@ -45,6 +46,24 @@ function StepButton() {
     <button>Step</button>
   )
 }
+
+function ListDisplay(props) {
+  const { 
+    children, 
+    aList, 
+    ...otherProps 
+  } = props
+
+
+  return (
+    <div className="list-item-card-grid" >
+      { aList.map( i => (
+        <div className="normal-list-item-card" >{i}</div>
+      ))}
+    </div>
+  )
+}
+
 function ListDisplayStylingExample() {
   return (
     <div className="list-item-card-grid" >
