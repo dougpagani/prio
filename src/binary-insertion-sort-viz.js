@@ -75,9 +75,9 @@ function ListDisplay(props) {
 
 
   return (
-    <div className="list-item-card-grid" >
       { aList.map( i => (
         <div className="normal-list-item-card" >{i}</div>
+    <div className="list-item-card-grid" {...otherProps} >
       ))}
     </div>
   )
