@@ -1,0 +1,31 @@
+0 5 9 12 | 7
+12 | 9 0 5
+
+
+Li = 0 // reset to beginning
+Ri = 3 // reset to new curIndex
+Mi = 1 // Li + Ri / 2 % 1
+Mi == 5
+> yes, set middle to left
+
+Li = 1 // reset to beginning
+Ri = 3 // reset to new curIndex
+Mi = 2 // Li + Ri / 2 % 1
+Mi == 9
+> no, set right to middle
+
+Li = 1 // reset to beginning
+Ri = 2 // reset to new curIndex
+Mi = 1 // Li + Ri / 2 % 1
+> Li == Mi, therefore, your Ri is your index-of-insertion
+
+Insertion algorithm: splice & append
+
+"if middle is equal to either one, you're at the end"
+> start/end or top/bottom instead of left/right
+
+
+/* curIndex = */ 
+/* (val) = 9 */
+
+
