@@ -58,8 +58,8 @@ function BisVx(props) {
     )
   }
   function SortButton() { return <button onClick={sortDisplayList}>Sort</button> }
-  function ShuffleButton() { return ( <button onClick={shuffleDisplayList}>Shuffle</button>) }
-  function StepButton() { return ( <button>Step</button>) }
+  function ShuffleButton() { return <button onClick={shuffleDisplayList}>Shuffle</button> }
+  function StepButton() { return <button>Step</button> }
 
 }
 
