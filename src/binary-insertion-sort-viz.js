@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import './binary-insertion-sort-viz.css'
 
+const LIST_ITEM_TYPE = {
+  numbers: "numbers",
+  letters: "letters",
+}
+
 function BisVx(props) {
   const { children, ...otherProps } = props
+
+  // Pieces of state that have to do with the interactivity component
+  const [listItemType, setListItemType] = useState(LIST_ITEM_TYPE.numbers)
 
   // All the pieces of state for BIS
   const [leftPointer, setLeftPointer] = useState()
