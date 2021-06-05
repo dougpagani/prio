@@ -10,6 +10,10 @@ const LIST_ITEM_TYPE = {
 const ALPHABET_LIST = "abcdefghijklmnopqrstuvwxyz".split('')
 const NUMBERS_LIST = [ 23, 10, 5, 23, 76, 91, 29, 3, 8 ]
 
+// This injects a pause inbetween (what are otherwise very fast) algorithm
+// operations, so that a human can conciously walk-through with the algorithm.
+const ALGO_SLOW_MO_INTERVAL = 1000 // in milliseconds
+
 function BisVx(props) {
   const { children, ...otherProps } = props
 
