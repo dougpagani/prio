@@ -12,8 +12,8 @@ function BisVx(props) {
 
   return (
     <div>
-      <ActionsMenu/>
       <ListDisplay/>
+      <ActionsMenu/>
     </div>
     
   )
