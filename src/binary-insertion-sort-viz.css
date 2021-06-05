@@ -1,0 +1,10 @@
+.list-item-card.list-item-card {
+  border: 3px solid #716F70;
+  background: #CFCDCE;
+  color: black;
+}
+
+.list-item-card-grid.list-item-card-grid {
+  display: flex;
+  gap: 10px; /* TODO: make this smarter later */
+}

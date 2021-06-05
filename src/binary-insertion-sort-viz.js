@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import './binary-insertion-sort-viz.css'
 
 function BisVx(props) {
   const { children, ...otherProps } = props
@@ -46,10 +47,10 @@ function StepButton() {
 }
 function ListDisplay() {
   return (
-    <div>
-      <div>a</div>
-      <div>b</div>
-      <div>c</div>
+    <div className="list-item-card-grid" >
+      <div className="list-item-card">a</div>
+      <div className="list-item-card">b</div>
+      <div className="list-item-card">c</div>
     </div>
   )
 }
