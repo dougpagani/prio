@@ -37,6 +37,9 @@ function BisVx(props) {
     shuffle(listCopy)
     setList(listCopy)
   }
+  function visibleSort() {
+    throw Error('Function Not Yet Implemented')
+  }
 
 
   return (
@@ -55,12 +58,14 @@ function BisVx(props) {
     const { children, TODO, ...otherProps } = props
     return (
       <div>
+        <VisibleSortButton/>
         <SortButton/>
-        <ShuffleButton action={shuffleDisplayList}/>
+        <ShuffleButton/>
         <StepButton/>
       </div>
     )
   }
+  function VisibleSortButton() { return <button onClick={visibleSort}>See sort</button> }
   function SortButton() { return <button onClick={sortDisplayList}>Sort</button> }
   function ShuffleButton() { return <button onClick={shuffleDisplayList}>Shuffle</button> }
   function StepButton() { return <button>Step</button> }
