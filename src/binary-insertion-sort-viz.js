@@ -25,6 +25,7 @@ function ActionsMenu(props) {
     <div>
       <SortButton/>
       <ShuffleResetButton/>
+      <StepButton/>
     </div>
   )
 }
@@ -36,6 +37,11 @@ function SortButton() {
 function ShuffleResetButton() {
   return (
     <button>Shuffle</button>
+  )
+}
+function StepButton() {
+  return (
+    <button>Step</button>
   )
 }
 function ListDisplay() {
