@@ -51,29 +51,16 @@ function BisVx(props) {
     const { children, TODO, ...otherProps } = props
     return (
       <div>
-        <SortButton action={sortDisplayList}/>
+        <SortButton/>
         <ShuffleResetButton action={shuffleDisplayList}/>
         <StepButton/>
       </div>
     )
   }
+  function SortButton() { return <button onClick={sortDisplayList}>Sort</button> }
+  function ShuffleResetButton() { return ( <button onClick={shuffleDisplayList}>Shuffle</button>) }
+  function StepButton() { return ( <button>Step</button>) }
 
-}
-
-function SortButton({action}) {
-  return (
-    <button onClick={action}>Sort</button>
-  )
-}
-function ShuffleResetButton({action}) {
-  return (
-    <button onClick={action}>Shuffle</button>
-  )
-}
-function StepButton() {
-  return (
-    <button>Step</button>
-  )
 }
 
 function ListDisplay(props) {
