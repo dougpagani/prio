@@ -36,7 +36,11 @@ function BisVx(props) {
     </div>
     
   )
-  // HELPERS
+
+  ///////////////
+  //  HELPERS  //
+  ///////////////
+
   function ActionsMenu(props) {
     const { children, TODO, ...otherProps } = props
     return (
@@ -47,6 +51,7 @@ function BisVx(props) {
       </div>
     )
   }
+
 }
 
 function SortButton({action}) {
