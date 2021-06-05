@@ -1,7 +1,22 @@
-.list-item-card.list-item-card {
+.normal-list-item-card.normal-list-item-card {
   border: 3px solid #716F70;
   background: #CFCDCE;
   color: black;
+  padding: 10px;
+}
+
+.sorted-list-item-card.sorted-list-item-card {
+  border: 3px solid green;
+  background: lightgreen;
+  color: black;
+  padding: 10px;
+}
+
+.working-list-item-card.working-list-item-card {
+  border: 3px solid #907000;
+  background: #fad749;
+  color: black;
+  padding: 10px;
 }
 
 .list-item-card-grid.list-item-card-grid {

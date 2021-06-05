@@ -13,7 +13,7 @@ function BisVx(props) {
 
   return (
     <div>
-      <ListDisplay/>
+      <ListDisplayStylingExample/>
       <ActionsMenu/>
     </div>
     
@@ -45,12 +45,12 @@ function StepButton() {
     <button>Step</button>
   )
 }
-function ListDisplay() {
+function ListDisplayStylingExample() {
   return (
     <div className="list-item-card-grid" >
-      <div className="list-item-card">a</div>
-      <div className="list-item-card">b</div>
-      <div className="list-item-card">c</div>
+      <div className="normal-list-item-card">a</div>
+      <div className="working-list-item-card">b</div>
+      <div className="sorted-list-item-card">c</div>
     </div>
   )
 }
