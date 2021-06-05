@@ -6,6 +6,9 @@ const LIST_ITEM_TYPE = {
   letters: "letters",
 }
 
+const ALPHABET_LIST = "abcdefghijklmnopqrstuvwxyz".split('')
+const NUMBERS_LIST = [ 23, 10, 5, 23, 76, 91, 29, 3, 8 ]
+
 function BisVx(props) {
   const { children, ...otherProps } = props
 
@@ -17,7 +20,7 @@ function BisVx(props) {
   const [rightPointer, setRightPointer] = useState()
   const [middlePointer, setMiddlePointer] = useState()
   const [unsortedSublistIndexInclusive, setUnsortedSublistIndexInclusive] = useState(0)
-  const [list, setList] = useState([0, 1, 2])
+  const [list, setList] = useState(NUMBERS_LIST)
 
 
   return (
