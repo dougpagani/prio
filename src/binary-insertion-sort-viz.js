@@ -52,13 +52,13 @@ function BisVx(props) {
     return (
       <div>
         <SortButton/>
-        <ShuffleResetButton action={shuffleDisplayList}/>
+        <ShuffleButton action={shuffleDisplayList}/>
         <StepButton/>
       </div>
     )
   }
   function SortButton() { return <button onClick={sortDisplayList}>Sort</button> }
-  function ShuffleResetButton() { return ( <button onClick={shuffleDisplayList}>Shuffle</button>) }
+  function ShuffleButton() { return ( <button onClick={shuffleDisplayList}>Shuffle</button>) }
   function StepButton() { return ( <button>Step</button>) }
 
 }
