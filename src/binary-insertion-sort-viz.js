@@ -29,9 +29,10 @@ function BisVx(props) {
   ]
 
   // All the pieces of state for BIS
-  const [leftPointer, setLeftPointer] = useState()
-  const [rightPointer, setRightPointer] = useState()
-  const [middlePointer, setMiddlePointer] = useState()
+  const [leftPointer, setLeftPointer] = useState(0)
+  const [rightPointer, setRightPointer] = useState(0)
+  const [middlePointer, setMiddlePointer] = useState(null)
+  const [curIndex, setCurIndex] = useState(0)
   const [unsortedSublistIndexInclusive, setUnsortedSublistIndexInclusive] = useState(0)
   const [list, setList] = useState(NUMBERS_LIST)
 
@@ -45,6 +46,27 @@ function BisVx(props) {
     shuffle(listCopy)
     setList(listCopy)
   }
+
+  function step() {
+    // needs to somehow keep track of _which_ step it's on...
+    // ... which is VERY algorithm-dependent
+    // ... OR a step is: indexDone 0 -> 1
+    const middlePointer = Math.floor((leftPointer + rightPointer) / 2)
+    setMiddlePointer(middlePointer)
+    if (list[middlePointer] > list[curIndex]) {
+
+    }
+
+    // base case
+    // if (rightPointer === list.length - 1) {
+    //   // done sorting
+    //   alert('done sorting!')
+    //   return
+    // } else {
+      
+    // }
+  }
+
   function visibleSort() {
     throw Error('Function Not Yet Implemented')
   }
@@ -75,6 +97,7 @@ function BisVx(props) {
         <div>leftPointer: {leftPointer}</div>
         <div>rightPointer: {rightPointer}</div>
         <div>middlePointer: {middlePointer}</div>
+        <div>curIndex: {curIndex}</div>
         <div>list: {JSON.stringify(list)}</div>
       </div>
     )
@@ -94,8 +117,7 @@ function BisVx(props) {
   function VisibleSortButton() { return <button onClick={visibleSort}>See sort</button> }
   function SortButton() { return <button onClick={sortDisplayList}>Sort</button> }
   function ShuffleButton() { return <button onClick={shuffleDisplayList}>Shuffle</button> }
-  function StepButton() { return <button>Step</button> }
-
+  function StepButton() { return <button onClick={step}>Step</button> }
 }
 
 function ListDisplay(props) {
