@@ -75,6 +75,7 @@ function BisVx(props) {
   return (
     <div>
       <ListDisplay aList={list}/>
+      <MetaListDataIndicators/>
       <ActionsMenu/>
       <InternalsDashboard/>
     </div>
@@ -84,6 +85,50 @@ function BisVx(props) {
   ///////////////
   //  HELPERS  //
   ///////////////
+  function MetaListDataIndicators(props) {
+    const {
+      children, 
+      TODO, 
+      ...otherProps 
+    } = props
+
+    return (
+      <div className="pointers-row" >
+
+        <div className="pointer-indicator" >
+          <div className="arrow-up"/>
+          <div>L</div>
+        </div>
+        <div className="pointer-indicator" >
+          <div className="arrow-up"/>
+          <div>M</div>
+        </div>
+        <div className="pointer-indicator" >
+          <div className="arrow-empty"/>
+        </div>
+        <div className="pointer-indicator" >
+          <div className="arrow-up"/>
+          <div>R</div>
+        </div>
+        <div className="pointer-indicator" >
+          <div className="arrow-up"/>
+          <div>L</div>
+        </div>
+        <div className="pointer-indicator" >
+          <div className="arrow-up"/>
+          <div>M</div>
+        </div>
+        <div className="pointer-indicator" >
+          <div className="arrow-empty"/>
+        </div>
+        <div className="pointer-indicator" >
+          <div className="arrow-up"/>
+          <div>R</div>
+        </div>
+
+      </div>
+    )
+  }
   function InternalsDashboard(props) {
   // This could maybe be generalized for any arbitrary component with:
   // https://stackoverflow.com/questions/56875281/how-do-i-pass-all-state-variables-inside-react-hooks-to-my-child-component
@@ -94,11 +139,11 @@ function BisVx(props) {
 
     return (
       <div className="internals-dashboard" >
-        <div>leftPointer: {leftPointer}</div>
-        <div>rightPointer: {rightPointer}</div>
-        <div>middlePointer: {middlePointer}</div>
-        <div>curIndex: {curIndex}</div>
-        <div>list: {JSON.stringify(list)}</div>
+        <div>leftPointer: <span className="value">{leftPointer}</span></div>
+        <div>rightPointer: <span className="value">{rightPointer}</span></div>
+        <div>middlePointer: <span className="value">{middlePointer}</span></div>
+        <div>curIndex: <span className="value">{curIndex}</span></div>
+        <div>list: <span className="value">{JSON.stringify(list)}</span></div>
       </div>
     )
   }

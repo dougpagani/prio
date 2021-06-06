@@ -21,7 +21,12 @@
 
 .list-item-card-grid.list-item-card-grid {
   display: flex;
-  gap: 10px; /* TODO: make this smarter later */
+  gap: 0.5em; /* TODO: make this smarter later */
+}
+
+.list-item-card-grid.list-item-card-grid > * {
+  flex: 0 0 1em;
+  text-align: center;
 }
 
 .internals-dashboard.internals-dashboard {
@@ -32,4 +37,42 @@
   font-size: 0.8em;
   font-family: monospace; 
 }
+.value.value {
+  color: #fe019a;
+  font-weight: bold;
+}
 
+.arrow-up {
+  --size: 1em;
+  width: 0; 
+  height: 0; 
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  
+  border-bottom: var(--size) solid maroon;
+  margin: 0.25em;
+}
+.arrow-empty {
+  --size: 1em;
+  width: var(--size);
+  width: 0;
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  
+  border-bottom: var(--size) solid transparent;
+  margin: 0.25em;
+
+}
+.pointer-indicator.pointer-indicator {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  
+}
+.pointers-row.pointers-row {
+  display: flex;
+  flex-direction: row;
+  
+}
