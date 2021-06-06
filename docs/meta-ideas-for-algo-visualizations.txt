@@ -1,0 +1,7 @@
+- display all values (just writing 
+- build visualizations for each value that semantically is useful
+  - e.g. set border of right border element to someColor
+  - or we could have a grid area below that indicates some of these values with arrows, or shapes of some sort, or underlined
+  * These two strategies are quite different in nature of implementation:
+    1) css class conditioning
+    2) full-blown html, structure, new UI-components
