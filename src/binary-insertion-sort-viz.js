@@ -20,6 +20,14 @@ function BisVx(props) {
   // Pieces of state that have to do with the interactivity component
   const [listItemType, setListItemType] = useState(LIST_ITEM_TYPE.numbers)
 
+
+  // Other idea for more fine-grained step-throughs
+  const [algoStep, setAlgoStep] = useState()
+  const ALGO_INSTRUCTIONS = [
+    'const x = asdfasdf',
+    '',
+  ]
+
   // All the pieces of state for BIS
   const [leftPointer, setLeftPointer] = useState()
   const [rightPointer, setRightPointer] = useState()
