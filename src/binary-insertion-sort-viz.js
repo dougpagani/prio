@@ -118,22 +118,28 @@ function BisVx(props) {
   function SortButton() { return <button onClick={sortDisplayList}>Sort</button> }
   function ShuffleButton() { return <button onClick={shuffleDisplayList}>Shuffle</button> }
   function StepButton() { return <button onClick={step}>Step</button> }
-}
-
-function ListDisplay(props) {
-  const { 
-    aList, 
-    ...otherProps 
-  } = props
+  function ListDisplay(props) {
+    const { 
+      aList, 
+      ...otherProps 
+    } = props
 
 
-  return (
-    <div className="list-item-card-grid" {...otherProps} >
-      { aList.map( (item, i) => (
-        <div className="normal-list-item-card" >{item}</div>
-      ))}
-    </div>
-  )
+    return (
+      <div className="list-item-card-grid" {...otherProps} >
+        { aList.map( (item, i) => { 
+          if (i < curIndex) {
+            return ( <div className="sorted-list-item-card" >{item}</div> )
+          } else if (i === curIndex) {
+            return ( <div className="working-list-item-card" >{item}</div> )
+          } else {
+            return ( <div className="normal-list-item-card" >{item}</div> )
+          }
+        })}
+      </div>
+    )
+  }
+
 }
 
 function ListDisplayStylingExample() {
