@@ -47,3 +47,5 @@
     - itemIdA
     - itemIdB
     - decisionTime (e.g. ~4seconds)
+
+- fun exercise: interactive component of adding a number and watching it insert
