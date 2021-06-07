@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './binary-insertion-sort-viz.css'
 import shuffle from './shuffle.js'
 
@@ -77,7 +77,11 @@ function BisVx(props) {
       <ListDisplay aList={list}/>
       <MetaListDataIndicators/>
       <ActionsMenu/>
-      <InternalsDashboard/>
+      <InternalsDashboard 
+        internalsObject={{ 
+          curIndex, leftPointer, middlePointer, rightPointer, list,
+        }}
+      />
     </div>
     
   )
@@ -146,6 +150,36 @@ function BisVx(props) {
         <div>list: <span className="value">{JSON.stringify(list)}</span></div>
       </div>
     )
+  }
+
+  function InternalsDashboard({internalsObject}) {
+    const { 
+      ...otherProps 
+    } = props
+
+    return (
+      <div className="internals-dashboard">
+        { Object.keys(internalsObject).map( k => {
+          return (
+            <div>
+              {k}: 
+              <span className="state-value">
+                {contingentTransform(internalsObject[k])}
+              </span>
+            </div>
+          )
+        })}
+      </div>
+    )
+
+    // Helpers
+    function contingentTransform(value) {
+      if (Array.isArray(value)) {
+        return JSON.stringify(value)
+      } else {
+        return value // no transform
+      }
+    }
   }
 
   function ActionsMenu(props) {

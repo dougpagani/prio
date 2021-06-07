@@ -37,7 +37,7 @@
   font-size: 0.8em;
   font-family: monospace; 
 }
-.value.value {
+.state-value.state-value {
   color: #fe019a;
   font-weight: bold;
 }
